@@ -3,88 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagi Ceria - Alam Segar</title>
+    <title>Beranda - Alam Cerah</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Menu Navigasi Sesuai File VS Code Kamu -->
-    <div class="navbar">
-        <a href="#beranda" class="active">🌱 Beranda</a>
-        <a href="#form-biodata">📝 Form Biodata</a>
-        <a href="#hasil-biodata">🌷 Hasil Biodata</a>
-        <a href="#tabel-tugas">📊 Tabel Tugas</a>
-    </div>
+    <header>
+        <h1>🌿 ALAM CERAH 🌿</h1>
+        <p>Website Tugas Praktik HTML dan CSS</p>
+    </header>
 
-    <!-- 1. Bagian Beranda & Foto Alam -->
-    <div id="beranda" class="bagian">
-        <h1>☀️ Selamat Pagi, Alam Segar! 🍃</h1>
-        <p>Sambut harimu dengan kesegaran dedaunan, sinar matahari hangat, dan semangat baru.</p>
-        
-        <!-- Foto Alam -->
-        <img src="https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?w=600" alt="Suasana Pagi Hari" class="foto-alam">
-        <p class="caption">🌅 Suasana fajar dan embun pagi di padang hijau</p>
-    </div>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="from_biodata.html">Form Biodata</a>
+        <a href="hasil_biodata.html">Hasil Biodata</a>
+        <a href="tabel.html">Tabel</a>
+    </nav>
 
-    <!-- 2. Bagian Form Biodata -->
-    <div id="form-biodata" class="bagian">
-        <h2>📝 Form Biodata</h2>
-        <form>
-            <div class="form-group">
-                <label>Nama Lengkap:</label><br>
-                <input type="text" placeholder="Masukkan nama..." required>
+    <main>
+        <section class="hero">
+            <div>
+                <h2>Selamat Datang</h2>
+                <p>
+                    Nikmati suasana alam yang cerah, hijau, dan menyegarkan.
+                    Alam adalah bagian penting dalam kehidupan kita.
+                </p>
+                <a href="from_biodata.html" class="tombol">
+                    Isi Biodata
+                </a>
             </div>
-            <div class="form-group">
-                <label>Kelas:</label><br>
-                <input type="text" placeholder="Contoh: 10 RPL 3" required>
+
+            <div class="gambar-alam">
+                <img src="foto.jpg" alt="Pemandangan Alam">
             </div>
-            <button type="button" class="btn">Kirim Data</button>
-        </form>
-    </div>
+        </section>
 
-    <!-- 3. Bagian Hasil Biodata -->
-    <div id="hasil-biodata" class="bagian">
-        <h2>🌷 Hasil Biodata</h2>
-        <div class="biodata-box">
-            <p><strong>Nama:</strong> Siswa RPL</p>
-            <p><strong>Kelas:</strong> 10 RPL 3</p>
-            <p><strong>Status:</strong> Aktif & Semangat!</p>
-        </div>
-    </div>
+        <section class="tentang">
+            <h2>🌱 Tentang Website</h2>
+            <p>
+                Website ini dibuat sebagai tugas praktik HTML dan CSS.
+                Di dalam website ini terdapat form biodata, hasil biodata,
+                dan tabel data.
+            </p>
+        </section>
 
-    <!-- 4. Bagian Tabel Tugas -->
-    <div id="tabel-tugas" class="bagian">
-        <h2>📊 Tabel Tugas</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama Tugas</th>
-                    <th>Mata Pelajaran</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Membuat Landing Page</td>
-                    <td>Pemrograman Web</td>
-                    <td>Selesai</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Desain Form Biodata</td>
-                    <td>Pemrograman Web</td>
-                    <td>Proses</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <section class="kartu-container">
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>🍃 Dibuat untuk Tugas Praktik Web © 2026 ☀️</p>
-    </div>
+            <div class="kartu">
+                <div class="emoji">📝</div>
+                <h3>Form Biodata</h3>
+                <p>Tempat untuk mengisi data diri.</p>
+                <a href="from_biodata.html">Buka Form</a>
+            </div>
+
+            <div class="kartu">
+                <div class="emoji">👤</div>
+                <h3>Hasil Biodata</h3>
+                <p>Menampilkan data biodata yang sudah dibuat.</p>
+                <a href="hasil_biodata.html">Lihat Biodata</a>
+            </div>
+
+            <div class="kartu">
+                <div class="emoji">📊</div>
+                <h3>Tabel</h3>
+                <p>Menampilkan data siswa dalam bentuk tabel.</p>
+                <a href="tabel.html">Lihat Tabel</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>🌿 &copy; 2026 Alam Cerah | Tugas Praktik HTML & CSS 🌿</p>
+    </footer>
 
 </body>
 </html>

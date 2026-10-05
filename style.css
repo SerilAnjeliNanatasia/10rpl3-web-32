@@ -1,119 +1,388 @@
-/* Mengatur font dan latar belakang tema alam cerah */
-body {
-    font-family: Arial, sans-serif;
+/* =========================
+   PENGATURAN DASAR
+========================= */
+
+* {
     margin: 0;
     padding: 0;
-    /* Gradasi warna hijau muda ke kuning segar */
-    background: linear-gradient(to bottom, #e8f5e9, #fffde7);
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e8f8e8;
+    color: #333;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(135deg, #42a5f5, #66bb6a);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+
+/* =========================
+   NAVIGASI
+========================= */
+
+nav {
+    background-color: #2e7d32;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* =========================
+   HERO BERANDA
+========================= */
+
+.hero {
+    margin-top: 30px;
+    padding: 45px;
+    background: linear-gradient(120deg, #ffffff, #dcedc8);
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero h2 {
+    color: #2e7d32;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.gambar-alam img {
+    width: 300px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px #999;
+}
+
+
+/* =========================
+   TOMBOL
+========================= */
+
+.tombol {
+    display: inline-block;
+    background-color: #43a047;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+}
+
+.tombol:hover {
+    background-color: #1b5e20;
+}
+
+
+/* =========================
+   TENTANG
+========================= */
+
+.tentang {
+    background-color: white;
+    margin-top: 30px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.tentang h2 {
+    color: #388e3c;
+    margin-bottom: 15px;
+}
+
+.tentang p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   KARTU
+========================= */
+
+.kartu-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.kartu {
+    background-color: white;
+    width: 33%;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px #bbb;
+}
+
+.kartu:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.kartu .emoji {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.kartu h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.kartu p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.kartu a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-box,
+.hasil-box,
+.tabel-box {
+    background-color: white;
+    margin: 30px 0;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px #bbb;
+}
+
+.form-box h2,
+.hasil-box h2,
+.tabel-box h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
     color: #2e7d32;
 }
 
-/* Navbar / Menu Atas */
-.navbar {
-    background-color: #4caf50;
-    padding: 12px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 16px;
-    margin: 0 5px;
-    display: inline-block;
-}
-
-.navbar a:hover {
-    background-color: #388e3c;
-    border-radius: 5px;
-}
-
-/* Container tiap bagian */
-.bagian {
-    background-color: #ffffff;
-    width: 85%;
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #a5d6a7;
-    text-align: center;
-}
-
-/* Tampilan Gambar/Foto Alam */
-.foto-alam {
+input,
+select,
+textarea {
     width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
-.caption {
-    font-size: 0.85rem;
-    color: #558b2f;
-    margin-top: 5px;
+textarea {
+    height: 90px;
+    resize: none;
 }
 
-/* Tampilan Form */
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-group input {
+button {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
-    border: 1px solid #a5d6a7;
-    border-radius: 4px;
-}
-
-.btn {
-    background-color: #4caf50;
+    padding: 13px;
+    margin-top: 25px;
+    background-color: #43a047;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 7px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* Tampilan Hasil Biodata */
-.biodata-box {
-    background-color: #f1f8e9;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: left;
+button:hover {
+    background-color: #1b5e20;
 }
 
-/* Tampilan Tabel Sederhana */
+
+/* =========================
+   HASIL BIODATA
+========================= */
+
+.profil {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.foto {
+    text-align: center;
+}
+
+.foto img {
+    width: 190px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 5px solid #81c784;
+}
+
+.data {
+    flex: 1;
+}
+
+.data p {
+    padding: 11px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data b {
+    color: #2e7d32;
+}
+
+
+/* =========================
+   TABEL
+========================= */
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #777;
+    padding: 12px;
+    text-align: center;
 }
 
 th {
-    background-color: #81c784;
+    background-color: #43a047;
     color: white;
-    padding: 10px;
 }
 
-td {
-    padding: 8px;
-    text-align: center;
-    border: 1px solid #c8e6c9;
+tr:nth-child(even) {
+    background-color: #e8f5e9;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 15px;
+tr:hover {
     background-color: #c8e6c9;
-    font-size: 0.9rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   TAMPILAN HP
+========================= */
+
+@media (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .gambar-alam img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .kartu-container {
+        flex-direction: column;
+    }
+
+    .kartu {
+        width: 100%;
+    }
+
+    .profil {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
 }
