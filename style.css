@@ -1,0 +1,281 @@
+/* --- Variable Warna Nuansa Pagi Hari --- */
+:root {
+  --bg-gradient: linear-gradient(180deg, #eef9f1 0%, #fffde8 100%);
+  --sky-yellow: #fde047;
+  --morning-orange: #ffb703;
+  --leaf-green: #86efac;
+  --leaf-dark: #22543d;
+  --dew-blue: #bae6fd;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --text-main: #1e3a8a;
+  --text-dark: #1b4332;
+  --text-muted: #52796f;
+  --radius-cute: 24px;
+}
+
+/* --- Reset & Font --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- Efek Sinar Matahari Pagi (Background Glow) --- */
+.sun-glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(253, 224, 71, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Navbar Lucu Berbentuk Kapsul Melayang --- */
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(134, 239, 172, 0.25);
+  border: 2px solid #ffffff;
+  width: 100%;
+  max-width: 900px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Fredoka', cursive;
+  font-size: 1.4rem;
+  color: var(--text-dark);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--leaf-green);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+/* --- Layout Utama --- */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Hero Section & Foto Pagi --- */
+.hero-section {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: #fef08a;
+  color: #854d0e;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(254, 240, 138, 0.5);
+}
+
+.hero-title {
+  font-family: 'Fredoka', cursive;
+  font-size: 2.5rem;
+  color: var(--leaf-dark);
+  margin-bottom: 0.8rem;
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Bingkai Foto Pagi yang Lucu */
+.hero-image-wrapper {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: var(--radius-cute);
+  box-shadow: 0 15px 30px rgba(34, 84, 61, 0.1);
+  border: 3px dashed #bbf7d0;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.hero-image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.hero-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.image-caption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+
+/* --- Menu Grid Lucu --- */
+.section-title {
+  font-family: 'Fredoka', cursive;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: var(--leaf-dark);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Style Card Menu Khas Alam */
+.menu-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  border-radius: var(--radius-cute);
+  text-decoration: none;
+  color: var(--text-dark);
+  background: var(--card-bg);
+  border: 2px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Variasi Warna Aksen Menu */
+.card-green { border-bottom: 5px solid #4ade80; }
+.card-yellow { border-bottom: 5px solid #facc15; }
+.card-blue { border-bottom: 5px solid #38bdf8; }
+.card-orange { border-bottom: 5px solid #fb923c; }
+
+.card-icon {
+  font-size: 2.2rem;
+  background: #ffffff;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card-content h3 {
+  font-family: 'Fredoka', cursive;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.card-content p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.card-arrow {
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: transform 0.3s;
+}
+
+.menu-card:hover .card-arrow {
+  transform: translateX(5px);
+  color: var(--text-dark);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid #dcfce7;
+  margin-top: auto;
+  font-weight: 600;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+    border-radius: 20px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-img {
+    height: 220px;
+  }
+}

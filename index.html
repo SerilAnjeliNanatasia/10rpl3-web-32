@@ -1,22 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagi Segar - Beranda & Menu Lucu</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Font yang lucu & ramah -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-   class="container">
-</div>
 
-<!-- Daftar Tombol Menu -->
-<div class="menu-list">
-    <!-- Ganti tanda # dengan link file html atau link tujuan Bapak -->
-    <a href="form_biodata.html" class="menu-item"><span>📊</span> Form Biodata</a>
-    <a href="hasil_biodata.html" class="menu-item"><span>📋</span> Hasil Biodata</a>
-    <a href="tabel.html" class="menu-item"><span>🔍</span> Tabel</a>
-    
-</div>
+  <!-- Hiasan Sinar Pagi & Awan Embusan -->
+  <div class="sun-glow"></div>
+
+  <!-- Navbar Lucu Berbentuk Kapsul -->
+  <header class="navbar-container">
+    <nav class="navbar">
+      <div class="logo">
+        <span class="icon">☀️</span>
+        <span class="logo-text">PagiCeria</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">🌱 Beranda</a></li>
+        <li><a href="form_biodata.html">📝 Form Biodata</a></li>
+        <li><a href="hasil_biodata.html">🌷 Hasil Biodata</a></li>
+        <li><a href="tabel.html">📊 Tabel Tugas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Hero Section dengan Foto Pagi Hari -->
+    <section class="hero-section">
+      <div class="hero-badge">✨ Embun & Sinar Pagi Pertama</div>
+      <h1 class="hero-title">Selamat Pagi, Alam Segar! 🍃</h1>
+      <p class="hero-subtitle">Sambut harimu dengan kesegaran dedaunan, sinar matahari hangat, dan semangat baru.</p>
+
+      <div class="hero-image-wrapper">
+        <!-- Foto Alam Pagi Hari -->
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1000&q=80" alt="Suasana Pagi Hari Segar" class="hero-img">
+        <div class="image-caption">🌅 Suasana fajar dan embun pagi di padang hijau</div>
+      </div>
+    </section>
+
+    <!-- Menu-Menu Lucu & Segar (Interactive Cards) -->
+    <section class="menu-section">
+      <h2 class="section-title">Eksplorasi Menu Pagi 🌼</h2>
+      
+      <div class="menu-grid">
+        <!-- Menu Card 1 -->
+        <a href="form_biodata.html" class="menu-card card-green">
+          <div class="card-icon">🌱</div>
+          <div class="card-content">
+            <h3>Form Biodata</h3>
+            <p>Tanam data dirimu seperti benih tanaman baru!</p>
+          </div>
+          <span class="card-arrow">➜</span>
+        </a>
+
+        <!-- Menu Card 2 -->
+        <a href="hasil_biodata.html" class="menu-card card-yellow">
+          <div class="card-icon">🌻</div>
+          <div class="card-content">
+            <h3>Hasil Biodata</h3>
+            <p>Lihat mekar cantik dari data profil yang telah diisi.</p>
+          </div>
+          <span class="card-arrow">➜</span>
+        </a>
+
+        <!-- Menu Card 3 -->
+        <a href="tabel.html" class="menu-card card-blue">
+          <div class="card-icon">💧</div>
+          <div class="card-content">
+            <h3>Tabel Tugas</h3>
+            <p>Rekapitulasi tugas yang tersusun rapi sebersih embun.</p>
+          </div>
+          <span class="card-arrow">➜</span>
+        </a>
+
+        <!-- Menu Card 4 -->
+        <a href="#galeri" class="menu-card card-orange">
+          <div class="card-icon">🍊</div>
+          <div class="card-content">
+            <h3>Foto & Suasana</h3>
+            <p>Kumpulan energi positif untuk menemani harimu.</p>
+          </div>
+          <span class="card-arrow">➜</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>🍃 Dibuat dengan cinta & kesegaran embun pagi &copy; 2026 ☀️</p>
+  </footer>
+
 </body>
 </html>
